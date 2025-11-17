@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo">MyPortfolio</div>
+        <nav class="nav">
+            <button class="nav-link" data-section="home">Home</button>
+            <button class="nav-link" data-section="about">About</button>
+            <button class="nav-link" data-section="projects">Projects</button>
+            <button class="nav-link" data-section="contact">Contact</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HOME SECTION -->
+        <section id="home" class="section active">
+            <div class="hero">
+                <h1>Hi, I'm Julian 👋</h1>
+                <p class="subtitle">
+                    Aspiring developer, tech enthusiast, and lifelong learner.
+                </p>
+                <button id="scrollToProjects" class="primary-btn">
+                    View My Projects
+                </button>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>
+                I'm a developer who loves building things with code. I enjoy
+                learning new technologies, solving real-world problems,
+                and experimenting with JavaScript, C, Python, and more.
+            </p>
+            <p>
+                When I'm not coding, you can find me exploring tech trends,
+                tinkering with hardware, or planning my next big project.
+            </p>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="games">Games</button>
+            </div>
+            <div id="projectsList" class="projects-grid">
+                <!-- Filled dynamically by JavaScript -->
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="section">
+            <h2>Contact Me</h2>
+            <p>Have a question or a project idea? Send me a message.</p>
+            <form id="contactForm" class="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="name">Name*</label>
+                    <input id="name" name="name" type="text" required />
+                    <span class="error" data-for="name"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email*</label>
+                    <input id="email" name="email" type="email" required />
+                    <span class="error" data-for="email"></span>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message*</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <span class="error" data-for="message"></span>
+                </div>
+                <button type="submit" class="primary-btn">Send Message</button>
+                <p id="formStatus" class="form-status"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© <span id="year"></span> Julian · Built with HTML, CSS & JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
