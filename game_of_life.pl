@@ -126,6 +126,8 @@ seed_patterns($grid);
 
 $SIG{INT} = sub { print "\033[?25h\n"; exit 0; };
 
+$SIG{INT} = sub { print "\033[?25h\n"; exit 0; };
+
 eval {
     for my $gen (1 .. $GENERATIONS) {
         display($grid, $gen);
