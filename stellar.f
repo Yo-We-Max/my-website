@@ -147,7 +147,7 @@ C
 C
   400    CONTINUE
 C
-         WRITE(*,410) PINDEX
+         WRITE(*,410) PINDEX, NSTEPS
   410    FORMAT(/,1X,'** SURFACE NOT REACHED FOR N=',F4.1,
      &    ' IN ',I6,' STEPS **')
 C
